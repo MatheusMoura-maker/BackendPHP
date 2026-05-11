@@ -75,17 +75,14 @@ saida:
 
 echo "<H1> FOR </H1>";
 
-$i=0;
-
-
 for($i=0;$i<5;$i++) echo "$i ";
 
 
 
 echo "<h1>Looping aninhado</h1>";
 
-for($t=0;$t<11;$t++){//looping interno
-    for($i=0;$i<11;$i++){//looping interno
+for($t=0;$t<11;$t++){//looping externo
+    for($i=0;$i<11;$i++){//looping interno/externo
         for($j=0;$j<11;$j++){//looping interno
             echo "$t $i $j<br>";
         }
