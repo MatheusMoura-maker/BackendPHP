@@ -81,11 +81,12 @@ for($i=0;$i<5;$i++) echo "$i ";
 
 echo "<h1>Looping aninhado</h1>";
 
-for($t=0;$t<11;$t++){//looping externo
-    for($i=0;$i<11;$i++){//looping interno/externo
-        for($j=0;$j<11;$j++){//looping interno
-            echo "$t $i $j<br>";
-        }
+for($j=0;$j<20;$j+=3){
+    for($y=-5;$y<5;$y++){
+        for($x=100;$x<105;$x++){
+            echo " $j, $y, $x";
+            echo "Te amo Kayla"
+            }
     }
 }
 /*
