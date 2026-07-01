@@ -85,16 +85,17 @@ for($j=0;$j<20;$j+=3){
     for($y=-5;$y<5;$y++){
         for($x=100;$x<105;$x++){
             echo " $j, $y, $x";
-            echo "Te amo Kayla"
             }
     }
 }
-/*
+echo "<br> te amo Kayla";
+echo "<br>";
+var_dump($i);
 
 
 
 
-*/
+
 
 ?>
 

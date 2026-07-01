@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,98 +10,93 @@
 </body>
 </html>
 
-<H1>Impar ou Par</H1>
+<H1>Atividade 01</H1>
 
 <?php
 
-$n=1452;
+$compras = ["arroz", "feijão", "macarrão", "azeite", "sal"];
+$numero = 1;
 
-if($n % 2 == 0) {
-    echo "O numero ", $n, " é par";
+for($i = 0;$i < count($compras);$i++) {
+    echo $numero . "° " . $compras[$i] . "<br>";
+    $numero++;
 }
-elseif($n % 2 == 1) {
-    echo "O numero ", $n, " é impar";
-}
-else {
-    echo "Ação não identificada"; 
-}
+
 ?>
 
-<hr>
+<H1>Atividade 02</H1>
 
-<H1>Maior de idade</H1>
+<?php
+
+$notas = [7.5, 8.0, 6.5, 9.0, 10.0];
+$soma = 0;
+
+foreach ($notas as $nota) {
+    $soma = $soma + $nota;
+    };
+
+$media = $soma / count($notas);
+
+
+echo "Todas as notas deu um total de " . $soma . "<br>";
+echo "A média de notas foi: " . $media;
+
+?>
+
+
+<H1>Atividade 3</H1>
 
 
 <?php
 
-$i=15;
+$idades = [15, 22, 17, 30, 12, 25, 18];
 
-if($i >= 18) {
-    echo "Sua idade é de ", $i;
-    echo "<br>Parabens anta, ja pode votar";
+echo "Maiores de idade: ";
+
+foreach ($idades as $idade) {
+    if($idade >= 18) {
+        $maiores[] = $idade;
+    }
 }
-elseif($i <= 18) {
-    echo "Sua idade é de ", $i;
-    echo "<br>Você não pode votar!";
-}
-else {
-    echo "Numero não indetificado!";
-};
+echo implode(", ", $maiores);
 
 ?>
 
-<hr>
-
-<H1>Negativo ou positivo</H1>
-
-
-<?php 
-
-$y = 0;
-
-if ($y < 0) {
-    echo "Numero negativo";
-}
-elseif ($y > 0)  {
-    echo "Numero Positivo";
-}
-elseif ($y == 0) {
-    echo "Numero zero"; 
-}
-else {
-    echo "Numero não identificado";
-}
-
-
-?>
-<hr>
-
-<H1>Classificação de notas</h1>
+<H1>Atividade 04</H1>
 
 <?php
 
-$nota = 10;
+$pessoa = [
+    'nome'     => 'Lucas Oliveira',
+    'idade'    => 27,
+    'cidade'   => 'Campinas',
+    'profissao'=> 'Desenvolvedor'
+];
 
-if($nota >= 9 && $nota <= 10) {
-    echo "Exelente nota, Parabens!!";
-    Echo "<br>Nota " . $nota;
-}
-elseif($nota >= 7 && $nota <= 8.9) {
-    echo "Bom, pode melhorar!";
-    echo "<br>Nota " . $nota;
-}
-elseif($nota >= 5 && $nota <= 6.9) {
-    echo "Regular, Tem que melhorar";
-    echo "<br>Nota " . $nota;
-}
-elseif($nota >= 0 && $nota <= 4.9) {
-    echo "Reprovado, Deu ruim!!";
-    echo "<br>Nota " . $nota;
-}
-else {
-    echo "Nota invalida";
-}
 
+foreach($pessoa as $pessoas => $valor) {
+    echo ucfirst($pessoas) . ": " . $valor . "<br>";
+}
 
 
 ?>
+
+<H1> Atividade 05</H1>
+
+<?php
+
+$estoque = [
+    'caneta'   => 12,
+    'caderno'  => 3,
+    'borracha' => 8,
+    'régua'    => 1,
+    'lápis'    => 20
+];
+
+foreach($estoque as $est => $valor) {
+    if ($valor < 5 ) {
+        echo $est . ":" . " Estoque baixo (" . $valor . " unidades)<br>";
+    }
+
+}
+
